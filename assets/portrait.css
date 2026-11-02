@@ -1,0 +1,14 @@
+.portrait{position:relative;margin:16px 16px 42px;isolation:isolate}
+.portrait img{display:block;width:100%;height:auto}
+.portrait::before,.portrait::after{content:"";position:absolute;width:34%;height:28%;border:3px solid #375c83;pointer-events:none}
+.portrait::before{top:-10px;left:-11px;border-width:3px 0 0 3px;border-radius:12% 3% 0 2%;transform:rotate(-2deg)}
+.portrait::after{bottom:-10px;right:-11px;border-width:0 3px 3px 0;border-radius:0 2% 12% 3%;transform:rotate(-2deg)}
+.fish{position:absolute;right:0;top:calc(100% + 12px);width:60px;color:#375c83}
+.fish .bubble{opacity:0;transform-box:fill-box;transform-origin:center}
+.fish:is(:hover,:focus-visible) .bubble{animation:bubble 1.5s ease-out infinite}
+.fish:is(:hover,:focus-visible) .b2{animation-delay:.5s}
+@keyframes bubble{0%{opacity:0;transform:translate(0,0) scale(.45)}25%{opacity:1}100%{opacity:0;transform:translate(-6px,-13px) scale(1.2)}}
+@media(prefers-reduced-motion:reduce){.fish:is(:hover,:focus-visible) .bubble{animation:none;opacity:1}}
+.name-mark{filter:drop-shadow(.6px 0 0 black) drop-shadow(-.6px 0 0 black)}
+
+.lettering{min-width:0}.lettering img{display:block;height:auto}.name-mark{width:88%}.slogan-mark{display:block;width:66%;height:auto;margin:0 3% 0 auto}.portrait{width:min(80%,360px);justify-self:center}.bio p+p{margin-top:.85em}.bio p a{color:#384d84;text-decoration-thickness:1px;text-underline-offset:3px}.contacts{display:flex;gap:14px;align-items:center}.contacts a{display:grid;place-items:center;width:44px;height:44px;border:1px solid #adb9cf;border-radius:50%;text-decoration:none;font:bold 21px Georgia;color:#334b74}.contacts a:hover,.contacts a:focus-visible{background:#dce5f5}.lettering h1{line-height:0}@media(max-width:650px){.lettering{width:min(100%,410px)}.portrait{width:min(72%,300px)}}
